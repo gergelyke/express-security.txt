@@ -1,14 +1,14 @@
 {
   "name": "express-security.txt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gergelyke/node-security.txt.git"
+    "url": "git+https://github.com/gergelyke/express-security.txt.git"
   },
   "keywords": [
     "security.txt",
@@ -18,9 +18,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gergelyke/node-security.txt/issues"
+    "url": "https://github.com/gergelyke/express-security.txt/issues"
   },
-  "homepage": "https://github.com/gergelyke/node-security.txt#readme",
+  "homepage": "https://github.com/gergelyke/express-security.txt#readme",
   "devDependencies": {
     "express": "4.16.2",
     "supertest": "3.0.0",
