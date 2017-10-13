@@ -24,6 +24,6 @@
   "devDependencies": {
     "express": "4.16.2",
     "supertest": "3.0.0",
-    "tape": "4.8.0"
+    "tape": "^4.8.0"
   }
 }

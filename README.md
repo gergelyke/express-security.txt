@@ -15,11 +15,11 @@ const express = require('express')
 
 const app = express()
 
-app.get('/robots.txt', securityTxt({
+app.get('/security.txt', securityTxt({
   // your security address
   contact: 'email@example.com',
   // your pgp key
-  encryption: 'encryption',
+  encryption: https://example.com/security.gpg',
   // if you have a hall of fame for securty resourcers, include link here
   acknowledgements: 'http://acknowledgements.example.com'
 }))
