@@ -12,10 +12,11 @@ npm i express-security.txt -S
 
 ```javascript
 const express = require('express')
+const securityTxt = require('express-security.txt')
 
 const app = express()
 
-app.get('/robots.txt', securityTxt({
+app.get('/security.txt', securityTxt({
   // your security address
   contact: 'email@example.com',
   // your pgp key
