@@ -12,9 +12,11 @@ module.exports = function (fields) {
     }
   }
   
+  const securityTxtString = securityTxt.join("\n")
+  
   return function (request, response) {
     response.header("Content-Type", "text/plain");
-    response.send(securityTxt.join("\n"))
+    response.send(securityTxtString)
   }
 }
 
