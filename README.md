@@ -18,7 +18,10 @@ const app = express()
 
 app.get('/security.txt', securityTxt({
   // your security address
-  contact: 'mailto:email@example.com',
+  contact: [
+    'mailto:email@example.com',
+    'tel:+123456789'
+   ],
   // your pgp key
   encryption: 'encryption',
   // if you have a hall of fame for securty resourcers, include link here
