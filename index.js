@@ -7,12 +7,13 @@ module.exports = function (fields) {
   for(const directive in fields) {
     const key = normalizeCase(directive)
     
-    for(const value of forceToArray(fields[directive]) {
+    for(const value of forceToArray(fields[directive])) {
       securityTxt.push(`${key}: ${value}`)
     }
   }
   
   return function (request, response) {
+    response.header("Content-Type", "text/plain");
     response.send(securityTxt.join("\n"))
   }
 }
