@@ -8,7 +8,7 @@ module.exports = function (fields) {
   for (const directive in fields) {
     const key = normalizeCase(directive)
 
-    for (const value of forceToArray(fields[directive])) {
+    for (const value of ensureArray(fields[directive])) {
       securityTxt.push(`${key}: ${value}`)
     }
   }
@@ -40,7 +40,7 @@ function normalizeCase (string) {
  * @param {string|array} stringOrArray - The string or array to force to an array
  * @return {array} The array form of the argument
  */
-function forceToArray (stringOrArray) {
+function ensureArray (stringOrArray) {
   if (Array.isArray(stringOrArray)) {
     return stringOrArray
   } else {
