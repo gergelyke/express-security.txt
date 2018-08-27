@@ -21,3 +21,19 @@ test('Security.txt support all the properties', function (t) {
       t.end(err)
     })
 })
+
+test('Security.txt only requires Contact', function (t) {
+  t.plan(1)
+  const app = express()
+  app.get('/security.txt', securityTxt({
+    contact: 'email@example.com'
+  }))
+
+  supertest(app)
+    .get('/security.txt')
+    .expect(200)
+    .end(function (err, res) {
+      t.equal(res.text, `Contact: email@example.com\n`)
+      t.end(err)
+    })
+})
