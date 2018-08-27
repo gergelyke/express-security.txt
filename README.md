@@ -27,7 +27,7 @@ app.get('/security.txt', securityTxt({
     'tel:+123456789'
    ],
   // your pgp key
-  encryption: https://example.com/security.gpg',
+  encryption: 'https://example.com/security.gpg',
   // if you have a hall of fame for securty resourcers, include link here
   acknowledgements: 'https://acknowledgements.example.com'
 }))
