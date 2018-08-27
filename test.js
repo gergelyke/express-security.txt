@@ -33,7 +33,7 @@ test('Security.txt only requires Contact', function (t) {
     .get('/security.txt')
     .expect(200)
     .end(function (err, res) {
-      t.equal(res.text, `Contact: email@example.com\n`)
+      t.equal(res.text, `Contact: email@example.com`)
       t.end(err)
     })
 })

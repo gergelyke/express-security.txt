@@ -22,10 +22,13 @@ const app = express()
 
 app.get('/security.txt', securityTxt({
   // your security address
-  contact: 'email@example.com',
+  contact: [
+    'mailto:email@example.com',
+    'tel:+123456789'
+   ],
   // your pgp key
   encryption: https://example.com/security.gpg',
   // if you have a hall of fame for securty resourcers, include link here
-  acknowledgements: 'http://acknowledgements.example.com'
+  acknowledgements: 'https://acknowledgements.example.com'
 }))
 ```
