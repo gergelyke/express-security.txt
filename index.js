@@ -1,21 +1,22 @@
 module.exports = function (fields) {
-  if(!Object.keys(fields).map(normalizeCase).includes("Contact"))
-    throw "You must include a `contact` property for security.txt";
-  
+  if (!Object.keys(fields).map(normalizeCase).includes('Contact')) {
+    throw new Error('You must include a `contact` property for security.txt')
+  }
+
   const securityTxt = []
 
-  for(const directive in fields) {
+  for (const directive in fields) {
     const key = normalizeCase(directive)
-    
-    for(const value of forceToArray(fields[directive])) {
+
+    for (const value of forceToArray(fields[directive])) {
       securityTxt.push(`${key}: ${value}`)
     }
   }
-  
-  const securityTxtString = securityTxt.join("\n")
-  
+
+  const securityTxtString = securityTxt.join('\n')
+
   return function (request, response) {
-    response.header("Content-Type", "text/plain");
+    response.header('Content-Type', 'text/plain')
     response.send(securityTxtString)
   }
 }
@@ -27,8 +28,8 @@ module.exports = function (fields) {
  * @param {string} string - The string to convert
  * @return {string} The capitalized form of the string
  */
-function normalizeCase(string) {
-  return string[0].toUpperCase() + string.substr(1).toLowerCase();
+function normalizeCase (string) {
+  return string[0].toUpperCase() + string.substr(1).toLowerCase()
 }
 
 /**
@@ -39,8 +40,8 @@ function normalizeCase(string) {
  * @param {string|array} stringOrArray - The string or array to force to an array
  * @return {array} The array form of the argument
  */
-function forceToArray(stringOrArray) {
-  if(Array.isArray(stringOrArray)) {
+function forceToArray (stringOrArray) {
+  if (Array.isArray(stringOrArray)) {
     return stringOrArray
   } else {
     return [stringOrArray]
