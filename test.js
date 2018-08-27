@@ -16,7 +16,8 @@ test('Security.txt support all the properties', function (t) {
   supertest(app)
     .get('/robots.txt')
     .expect(200)
-    .end(function(err, res) {
+    .end(function (err, res) {
       t.equal(res.text, `Contact: email@example.com\nEncryption: encryption\nAcknowledgements: acknowledgements`)
-    });
+      t.end(err)
+    })
 })
