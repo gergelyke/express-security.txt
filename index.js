@@ -1,6 +1,6 @@
 module.exports = function (options) {
   return function (request, response) {
-    resp = `Contact: ${options.contact}\n`
+    let resp = `Contact: ${options.contact}\n`
     if (options.encryption) {
       resp += `Encryption: ${options.encryption}\n`
     }
