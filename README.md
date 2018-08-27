@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/gergelyke/express-security.txt.svg?branch=master)](https://travis-ci.org/gergelyke/express-security.txt)
+
+[![NPM](https://nodei.co/npm/express-security.txt.png?compact=true)](https://nodei.co/npm/express-security.txt/)
+
 ## node-security.txt
 
 ### Usage
@@ -23,7 +27,7 @@ app.get('/security.txt', securityTxt({
     'tel:+123456789'
    ],
   // your pgp key
-  encryption: 'encryption',
+  encryption: https://example.com/security.gpg',
   // if you have a hall of fame for securty resourcers, include link here
   acknowledgements: 'https://acknowledgements.example.com'
 }))
