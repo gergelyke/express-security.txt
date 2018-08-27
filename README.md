@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/gergelyke/express-security.txt.svg?branch=master)](https://travis-ci.org/gergelyke/express-security.txt)
+
+[![NPM](https://nodei.co/npm/express-security.txt.png?compact=true)](https://nodei.co/npm/express-security.txt/)
+
 ## node-security.txt
 
 ### Usage
